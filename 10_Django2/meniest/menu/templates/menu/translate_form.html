@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Translation</title>
+</head>
+<body>
+    <h1>Text Translation</h1>
+    <form method="post" action="{% url 'translate_request' %}">
+        {% csrf_token %}
+        <label for="input_text">Enter text to translate:</label><br>
+        <textarea id="input_text" name="input_text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Translate">
+    </form>
+</body>
+</html>
